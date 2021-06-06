@@ -5,10 +5,10 @@
           就业招聘网
       </div>
     <el-menu  default-active="2" background-color="#22262E" text-color="#ffffff" active-text-color="#1AA094" >
-      <el-menu-item index="1-1"><i class="el-icon-caret-right"></i></el-menu-item>
-      <el-menu-item index="1-2"><i class="el-icon-caret-right"></i></el-menu-item>
-      <el-menu-item index="1-3"><i class="el-icon-caret-right"></i></el-menu-item>
-      <el-menu-item index="1-4"><i class="el-icon-caret-right"></i></el-menu-item>
+      <el-menu-item index="1-1"><i class="el-icon-menu"></i></el-menu-item>
+      <el-menu-item index="1-2"><i class="el-icon-menu"></i></el-menu-item>
+      <el-menu-item index="1-3"><i class="el-icon-menu"></i></el-menu-item>
+      <el-menu-item index="1-4"><i class="el-icon-menu"></i></el-menu-item>
     </el-menu>
   </el-aside>
 </template>

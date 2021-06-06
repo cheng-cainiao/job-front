@@ -6,16 +6,14 @@
     <div class="user-info">
       <i class="el-icon-chat-line-square"></i>
       <i class="el-icon-full-screen"></i>
-          <el-dropdown>
+          <el-dropdown @command="handleCommand">
               <span class="el-dropdown-link">
                 admin<i class="el-icon-caret-bottom el-icon--right"></i>
               </span>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>黄金糕</el-dropdown-item>
-              <el-dropdown-item>狮子头</el-dropdown-item>
-              <el-dropdown-item>螺蛳粉</el-dropdown-item>
-              <el-dropdown-item disabled>双皮奶</el-dropdown-item>
-              <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
+              <el-dropdown-item>个人信息</el-dropdown-item>
+              <el-dropdown-item>修改密码</el-dropdown-item>
+              <el-dropdown-item>退出登录</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
     </div>
@@ -24,8 +22,24 @@
 
 <script>
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  methods:{
+    handleCommand(type){
+      console.log(type)
+      if(type === 'logout'){
+        this.$confirm('确定要退出吗？','退出提示',).then(()=>{
+          this.$router.push('/login');
+        }).catch(()=>{});
+      }
+      if(type === 'home'){
+        this.$router.push('/');
+      }
+    }
+  }
 }
+
+
+
 </script>
 
 <style scoped>
